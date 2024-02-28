@@ -1,8 +1,5 @@
-# Reusable Vue.js Components with Slots
-
-[![](https://vueschool.io/media/13867ba07d6eacdf868c78a340784a52/scoped-slots-course-not-transparent.jpg)](https://vueschool.io/courses/reusable-vuejs-components-with-slots)
-
-This repository contains the example code for the [Reusable Vue.js Components with Slots](https://vueschool.io/courses/reusable-vuejs-components-with-slots) course.
+# slot
+slot
 
 In this course, you'll learn how to use slots and scoped slots to create flexible and reusable Vue.js components.
 
