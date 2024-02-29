@@ -7,21 +7,32 @@
                 <Icon/>
                 Hello World!
             </AppButton2>  
+
+            <AppUserList2 :secondrow="user => user.email"></AppUserList2>
+            
         </template>
         <!-- <template v-slot:footer></template> --> 
+
+        <template #title>
+            <AppUserList2 :secondrow="user => user.email"></AppUserList2>
+        </template>
     </AppLayout2>
 </template>
+
+ <AppUserList2 :secondrow="user => user.email"></AppUserList2>
 
 <script>
 import AppButton2 from "./components2/AppButton2.vue"
 import Icon from "./components/AppIcon.vue";
 import AppLayout2 from "./components2/AppLayout2.vue";
+import AppUserList2 from "./components2/AppUserList2.vue";
 
 export default{
     components:{
         AppButton2,
         Icon,
-        AppLayout2
+        AppLayout2,
+        AppUserList2
     },
     methods:{
         log(){
