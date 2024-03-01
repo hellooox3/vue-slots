@@ -1,43 +1,22 @@
 <template>
-    <AppLayout2>
-        <template #header>Slots are awesome</template>   
-        <template v-slot:default>
-
-            <AppButton2 @click="log">
-                <Icon/>
-                Hello World!
-            </AppButton2>  
-
-            <AppUserList2 :secondrow="user => user.email"></AppUserList2>
-            
+   <AppUserList2>
+        <template #secondrow="{item}">
+            <a href="'tel: ' + item.phone">{{ item.phone }}</a>
+            <a href="'mailto: ' + item.email">{{ item.email }}</a>
         </template>
-        <!-- <template v-slot:footer></template> --> 
-
-        <template #title>
-            <AppUserList2 :secondrow="user => user.email"></AppUserList2>
-        </template>
-    </AppLayout2>
+   </AppUserList2>
 </template>
 
- <AppUserList2 :secondrow="user => user.email"></AppUserList2>
-
 <script>
-import AppButton2 from "./components2/AppButton2.vue"
-import Icon from "./components/AppIcon.vue";
-import AppLayout2 from "./components2/AppLayout2.vue";
+
 import AppUserList2 from "./components2/AppUserList2.vue";
 
 export default{
     components:{
-        AppButton2,
-        Icon,
-        AppLayout2,
         AppUserList2
     },
     methods:{
-        log(){
-            console.log("works!!");
-        }
+    
     }
 };
 </script>
